@@ -16,3 +16,17 @@ function catMouse(x) {
 }
 
 // or
+
+function catMouse(x) {
+  var count = 0;
+  for (var i in x) {
+      if (x[i] === ".") {
+          count++;
+      }
+  }
+  if (count <= 3) {
+      return "Caught!";
+  } else {
+      return "Escaped!";
+  }
+}
